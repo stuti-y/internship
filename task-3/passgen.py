@@ -1,3 +1,4 @@
+#Importing the library
 import random
 
 # Function to generate a list of passwords with given lengths
