@@ -1,7 +1,7 @@
 # Initialize an empty list to store tasks
 tasks = []
 
-# Function to display the to-do list
+# Function-1 to display the to-do list
 def display_tasks():
     if not tasks:  # Check if the task list is empty
         print("Your to-do list is empty.")
@@ -13,12 +13,12 @@ def display_tasks():
             # Display task with priority and color coding
             print(f"{i}. {task['task']} - Priority: {task['priority']} ({status}) - Color: {task['color']}")
 
-# Function to add a task to the to-do list
+# Function-2 to add a task to the to-do list
 def add_task(task_name, priority, color):
     tasks.append({"task": task_name, "completed": False, "priority": priority, "color": color})
     print(f"Task '{task_name}' with priority '{priority}' and color '{color}' added to your to-do list.")
 
-# Function to mark a task as completed
+# Function-3 to mark a task as completed
 def mark_completed(task_number):
     if 1 <= task_number <= len(tasks):  # Validate the task number
         tasks[task_number - 1]["completed"] = True  # Mark the task as completed
@@ -26,7 +26,7 @@ def mark_completed(task_number):
     else:
         print("Invalid task number. Please enter a valid task number.")
 
-# Function to remove a task from the to-do list
+# Function-4 to remove a task from the to-do list
 def remove_task(task_number):
     if 1 <= task_number <= len(tasks):  # Validate the task number
         removed_task = tasks.pop(task_number - 1)  # Remove the task from the list
@@ -34,12 +34,12 @@ def remove_task(task_number):
     else:
         print("Invalid task number. Please enter a valid task number.")
 
-# Function to organize tasks by priority
+# Function-5 to organize tasks by priority
 def organize_by_priority():
     tasks.sort(key=lambda x: x["priority"])  # Sort tasks by priority
     print("Tasks organized by priority.")
 
-# Function to update task color
+# Function-6 to update task color
 def update_task_color(task_number, color):
     if 1 <= task_number <= len(tasks):  # Validate the task number
         tasks[task_number - 1]["color"] = color  # Update the task color
